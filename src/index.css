@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Esto asegura que cuando la clase .dark esté en el <html>, se apliquen los estilos */
+@variant dark (&:where(.dark, .dark *));
+
+body {
+  @apply transition-colors duration-300;
+}
