@@ -40,7 +40,7 @@ const Ubicacion = () => {
               </div>
               <div>
                 <p className="font-bold text-slate-900 dark:text-white text-xl">Contacto Directo</p>
-                <p className="text-slate-600 dark:text-slate-400">+56 9 3215 5593</p>
+                <p className="text-slate-600 dark:text-slate-400">+56 9 4591 4914</p>
               </div>
             </div>
           </div>

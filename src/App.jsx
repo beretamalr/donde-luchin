@@ -17,10 +17,10 @@ function App() {
 
       <main className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-          <TarjetaHabitacion nombre="Individual" precio="$28.000" imagen="/assets/HabitacionIndividual.jpg" caracteristicas={["Baño Compartido", "Wi-Fi Alta Velocidad"]} />
+          <TarjetaHabitacion nombre="Individual" precio="$28.000" imagen="habitacionindividual.jpeg" caracteristicas={["Baño Compartido", "Wi-Fi Alta Velocidad"]} />
           <TarjetaHabitacion nombre="Doble" precio="$32.000" imagen="habitaciondoble.jpg" caracteristicas={["Baño Privado", "Camas separadas", "Wi-Fi Alta Velocidad"]} />
-          <TarjetaHabitacion nombre="Cuádruple" precio="$32.000" imagen="/assets/HabitacionCuadruple.jpg" caracteristicas={["Baño Compartido", "Televisión", "Ideal para familias", "Wi-Fi Alta Velocidad"]} />
-          <TarjetaHabitacion nombre="Matrimonial" precio="$32.000" imagen="/assets/HabitacionMatrimonial.jpg" caracteristicas={["Baño Privado", "TV Cable", "Cama Matrimonial", "Wi-Fi Alta Velocidad"]} />
+          <TarjetaHabitacion nombre="Cuádruple" precio="$32.000" imagen="habitacioncuadruple.jpeg" caracteristicas={["Baño Compartido", "Televisión", "Ideal para familias", "Wi-Fi Alta Velocidad"]} />
+          <TarjetaHabitacion nombre="Matrimonial" precio="$32.000" imagen="habitacionmatrimonio.jpeg" caracteristicas={["Baño Privado", "Cama Matrimonial","Cama de agregado para Niños(a)", "Wi-Fi Alta Velocidad"]} />
         </div>
         <FormularioContacto />
         <Ubicacion />

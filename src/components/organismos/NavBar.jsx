@@ -1,28 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
-  // 1. Estado para el modo oscuro
   const [darkMode, setDarkMode] = useState(false);
 
-  // 2. Efecto para aplicar la clase al elemento raíz (HTML)
   useEffect(() => {
-    const root = window.document.documentElement; // Seleccionamos el <html>
-    
     if (darkMode) {
-      root.classList.add('dark');
-      // Opcional: Esto ayuda a que el fondo del navegador cambie también
-      root.style.colorScheme = 'dark'; 
+      document.documentElement.classList.add('dark');
     } else {
-      root.classList.remove('dark');
-      root.style.colorScheme = 'light';
+      document.documentElement.classList.remove('dark');
     }
   }, [darkMode]);
 
+  const mensajeReserva = "Hola.. Quiero consultar por el precio de las habitaciones de su residencia..";
+  const urlWhatsApp = `https://wa.me/56945914914?text=${encodeURIComponent(mensajeReserva)}`;
+
   return (
-    <nav className="bg-white dark:bg-slate-900 text-slate-800 dark:text-white p-4 sticky top-0 z-50 shadow-md border-b border-slate-100 dark:border-slate-800 transition-all duration-300">
+    <nav className="bg-white dark:bg-slate-900 text-slate-800 dark:text-white p-4 sticky top-0 z-50 shadow-md border-b dark:border-slate-800 transition-all">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         
-        {/* Logo / Título */}
         <div className="flex items-center gap-2">
           <span className="text-2xl">🏡</span>
           <h1 className="text-xl font-black tracking-tight">
@@ -30,28 +25,28 @@ const Navbar = () => {
           </h1>
         </div>
         
-        <div className="flex items-center gap-3 sm:gap-6">
-          {/* BOTÓN DE INTERRUPTOR */}
+        <div className="flex items-center gap-2">
+          
+          {/* AHORA ES VISIBLE EN MÓVIL PERO CON TEXTO MÁS CORTO */}
+          <a 
+            href="https://wa.me/56945914914?text=*COTIZACIÓN%20EMPRESA*"
+            className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-3 py-2 rounded-xl text-[10px] sm:text-xs font-bold border dark:border-slate-700 hover:bg-slate-200 transition-all"
+          >
+            Empresas
+          </a>
+
           <button 
             onClick={() => setDarkMode(!darkMode)}
-            className="group relative flex items-center justify-center p-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all active:scale-90 border border-transparent dark:border-slate-700 shadow-inner"
-            aria-label="Cambiar modo de luz"
+            className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm border dark:border-slate-700"
           >
-            {/* El icono cambia según el estado */}
-            <span className="text-xl transform transition-transform duration-500 rotate-0 dark:rotate-[360deg]">
-              {darkMode ? '☀️' : '🌙'}
-            </span>
-            
-            {/* Tooltip pequeño que aparece al pasar el mouse */}
-            <span className="absolute -bottom-10 scale-0 group-hover:scale-100 transition-all bg-slate-800 text-white text-[10px] px-2 py-1 rounded">
-              {darkMode ? 'Luz' : 'Noche'}
-            </span>
+            {darkMode ? '☀️' : '🌙'}
           </button>
 
-          {/* Botón de Reserva Directa */}
           <a 
-            href="https://wa.me/56945914914" 
-            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-green-900/20 transition-all hover:-translate-y-0.5 active:translate-y-0"
+            href={urlWhatsApp} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-600 text-white px-3 py-2 rounded-xl text-[10px] sm:text-xs font-bold shadow-lg hover:bg-green-700 transition-colors"
           >
             Reservar
           </a>
