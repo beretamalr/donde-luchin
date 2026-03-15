@@ -27,7 +27,6 @@ const Navbar = () => {
         
         <div className="flex items-center gap-2">
           
-          {/* AHORA ES VISIBLE EN MÓVIL PERO CON TEXTO MÁS CORTO */}
           <a 
             href="https://wa.me/56945914914?text=*COTIZACIÓN%20EMPRESA*"
             className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-3 py-2 rounded-xl text-[10px] sm:text-xs font-bold border dark:border-slate-700 hover:bg-slate-200 transition-all"

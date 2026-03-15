@@ -55,7 +55,6 @@ const Ubicacion = () => {
           </a>
         </div>
 
-        {/* Lado del Mapa (Sin cambios de diseño, igual al anterior) */}
         <div className="h-[450px] lg:h-auto min-h-[400px]">
           <iframe 
             title="Mapa Hernán Merino 120"

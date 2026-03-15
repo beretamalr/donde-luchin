@@ -11,7 +11,6 @@ const FormularioContacto = () => {
 
   const enviarAWhatsApp = (e) => {
     e.preventDefault();
-    // Formateamos la fecha a DD-MM-AAAA para que sea legible en el chat
     const fechaFormateada = datos.fecha.split('-').reverse().join('-');
     
     const texto = `*CONSULTA RESERVA - DONDE LUCHÍN*%0A` +
@@ -102,7 +101,7 @@ const FormularioContacto = () => {
           type="submit" 
           className="w-full bg-green-600 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-green-700 transition-all active:scale-95"
         >
-          SOLICITAR COTIZACIÓN POR WHATSAPP
+          Solicitar cotización por WHATSAPP
         </button>
       </form>
     </section>
